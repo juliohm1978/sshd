@@ -10,7 +10,7 @@ push: docker
 	docker push $(TAG):$(VERSION)
 
 start:
-	-docker run -d --name sshd juliohm/sshd
+	-docker run -d --name sshd $(TAG):$(VERSION)
 	docker start sshd
 
 stop:
